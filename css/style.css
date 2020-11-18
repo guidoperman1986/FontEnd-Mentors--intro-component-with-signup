@@ -1,0 +1,152 @@
+* > {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 56.25%; } }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url("../images/bg-intro-desktop.png") #ff7a7a; }
+
+.container {
+  display: grid;
+  grid-template-rows: 90vh 10vh;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row: 1 / 2; }
+  @media only screen and (max-width: 56.25em) {
+    .container {
+      grid-template-rows: repeat(2, min-content) 10vh;
+      grid-template-columns: 1fr;
+      grid-row-gap: 4rem;
+      margin: 8rem auto; } }
+  .container__left {
+    grid-column: 1 / 2;
+    align-items: center;
+    /* padding: 8rem;
+        padding-left: 3rem; */
+    padding-left: 9rem;
+    color: #fff;
+    margin: auto auto; }
+    .container__left h1 {
+      font-size: 5rem;
+      font-weight: 900;
+      line-height: 1.3; }
+    .container__left p {
+      font-size: 2rem;
+      font-weight: 500; }
+    @media only screen and (max-width: 56.25em) {
+      .container__left {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        text-align: center;
+        padding: 0; }
+        .container__left h1 {
+          font-size: 4rem; } }
+  .container__rigth {
+    grid-column: 2 / 3;
+    display: grid;
+    align-content: center; }
+    @media only screen and (max-width: 56.25em) {
+      .container__rigth {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3; } }
+  .container .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: #fff;
+    cursor: pointer;
+    width: 50rem;
+    height: 6rem;
+    height: 4.8rem;
+    border-radius: .5rem; }
+    .container .btn__violet {
+      margin-bottom: 2rem;
+      background-color: #6055a5;
+      border: 1rem solid #6055a5;
+      font-size: 1.8rem;
+      padding: 2rem;
+      box-shadow: 0px 5px 5px #918080; }
+      @media only screen and (max-width: 31.25em) {
+        .container .btn__violet {
+          width: 45rem; } }
+      @media only screen and (max-width: 26.25em) {
+        .container .btn__violet {
+          width: 40rem; } }
+    .container .btn__green {
+      /* margin-bottom: .5rem; */
+      width: 39rem;
+      background-color: #38cc8c;
+      border: 1rem solid #38cc8c;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      font-weight: 400; }
+      @media only screen and (max-width: 26.25em) {
+        .container .btn__green {
+          width: 36rem; } }
+    .container .btn__text-bold {
+      font-weight: bold; }
+  .container .table {
+    background-color: #fff;
+    margin: auto auto;
+    border-radius: 1rem;
+    width: 45rem;
+    height: 38rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 5px 5px #918080;
+    outline: none; }
+    .container .table__input {
+      display: flex;
+      margin: .8rem auto;
+      width: 33rem;
+      height: 2.5rem;
+      border-radius: 1rem;
+      border: 1px solid #b9b6d3;
+      outline: none;
+      padding: 1rem 3rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #3e3c49; }
+      @media only screen and (max-width: 26.25em) {
+        .container .table__input {
+          width: 30rem; } }
+      .container .table__input:active, .container .table__input:focus {
+        border: 0.1rem solid #3e3c49; }
+      .container .table__input::placeholder {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #b9b6d3; }
+    .container .table .warning {
+      text-align: center;
+      color: #b9b6d3;
+      font-size: 1.2rem; }
+    .container .table .terms {
+      color: red;
+      font-weight: 700; }
+    @media only screen and (max-width: 26.25em) {
+      .container .table {
+        width: 40rem; } }
+
+footer {
+  grid-row: 2 / 3;
+  grid-column: 1 / span 2;
+  margin: 0 auto;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #fff; }
+  footer a {
+    text-decoration: none;
+    color: #3e3c49; }
+  @media only screen and (max-width: 56.25em) {
+    footer {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4; } }
