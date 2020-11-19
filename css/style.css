@@ -15,9 +15,9 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 90vh 10vh;
+  grid-template-rows: [body-start] 90vh [body-end footer-start] 10vh [footer-end];
   grid-template-columns: repeat(2, 1fr);
-  grid-row: 1 / 2; }
+  grid-row: body-start / body-end; }
   @media only screen and (max-width: 56.25em) {
     .container {
       grid-template-rows: repeat(2, min-content) 10vh;

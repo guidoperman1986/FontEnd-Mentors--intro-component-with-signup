@@ -31,7 +31,7 @@ body{
 .container{
     display: grid;
 
-    grid-template-rows: 90vh 10vh;
+    grid-template-rows: [body-start] 90vh [body-end footer-start] 10vh [footer-end];
     grid-template-columns: repeat(2, 1fr);
 
     @media only screen and (max-width: $bp-900){
@@ -42,7 +42,7 @@ body{
 
     }
 
-    grid-row: 1 / 2;
+    grid-row: body-start / body-end;
     
     &__left{
         grid-column: 1 / 2;
