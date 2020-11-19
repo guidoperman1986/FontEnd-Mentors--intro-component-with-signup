@@ -32,11 +32,11 @@ body{
     display: grid;
 
     grid-template-rows: [body-start] 90vh [body-end footer-start] 10vh [footer-end];
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,[col-start] 1fr [col-end]);
 
     @media only screen and (max-width: $bp-900){
-        grid-template-rows: repeat(2, min-content) 10vh;
-        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,[row-start] min-content [row-end]) [footer-900-start] 10vh [footer-900-end];
+        grid-template-columns: [col-start] 1fr [col-end];
         grid-row-gap: 4rem;
         margin: 8rem auto;
 
@@ -45,7 +45,7 @@ body{
     grid-row: body-start / body-end;
     
     &__left{
-        grid-column: 1 / 2;
+        grid-column: col-start 1 / col-end 1;
         align-items: center;
         /* padding: 8rem;
         padding-left: 3rem; */
@@ -67,8 +67,8 @@ body{
         }
 
         @media only screen and (max-width: $bp-900){
-            grid-column: 1 / -1;
-            grid-row: 1 / 2;
+            grid-column: col-start 1 / -1;
+            grid-row: row-start 1 / row-end 1;
             text-align: center;
             padding: 0;
 
@@ -82,14 +82,14 @@ body{
     
     
     &__rigth{
-        grid-column: 2 / 3;
+        grid-column: col-start 2 / col-end 2;
 
         display: grid;
         align-content: center;
 
         @media only screen and (max-width: $bp-900){
-            grid-column: 1 / -1;
-            grid-row: 2 / 3;
+            grid-column: col-start 1 / -1;
+            grid-row: row-start 2 / row-end 2;
         }
     
     }
@@ -223,7 +223,7 @@ footer{
     }
 
     @media only screen and (max-width: $bp-900){
-        grid-column: 1 / -1;
-        grid-row: 3 / 4;
+        grid-column: col-start 1 / -1;
+        grid-row: footer-900-start 1 / -1;
     }
 }
